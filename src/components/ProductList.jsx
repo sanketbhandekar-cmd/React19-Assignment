@@ -1,7 +1,7 @@
 import { use } from 'react';
 import { ProductCard } from './ProductCard';
 
-export function ProductList({ productsPromise }) {
+export function ProductList({ productsPromise, onSelectProduct }) {
   const products = use(productsPromise);
 
   return (
@@ -13,7 +13,11 @@ export function ProductList({ productsPromise }) {
       <h2>Electronics Catalog</h2>
       <div className="product-grid">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            onSelect={onSelectProduct}
+          />
         ))}
       </div>
     </div>

@@ -20,6 +20,20 @@
   color: #1a73e8;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-badge {
+  font-size: 14px;
+  background-color: #f1f3f4;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #dadce0;
+}
+
 .header-user {
   display: flex;
   align-items: center;
@@ -194,7 +208,7 @@
 
 .product-image {
   width: 100%;
-  height: 240px;
+  height: 220px;
   object-fit: cover;
   background-color: #eaeaea;
 }
@@ -230,6 +244,252 @@
   font-size: 13px;
   color: #555;
   line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.btn-view-details {
+  margin-top: auto;
+  padding: 8px 14px;
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-view-details:hover {
+  background-color: #1557b0;
+}
+
+/* Product Details View */
+.product-details-container {
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.btn-back {
+  padding: 8px 14px;
+  background-color: #f1f3f4;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.btn-back:hover {
+  background-color: #e8eaed;
+}
+
+.product-details-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .product-details-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.details-media-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-image-box {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e1e4e8;
+  cursor: pointer;
+}
+
+.details-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.ref-cleanup-indicator {
+  font-size: 13px;
+  color: #5f6368;
+  font-style: italic;
+  text-align: center;
+}
+
+.details-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-title {
+  font-size: 24px;
+  margin-top: 4px;
+}
+
+.details-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1e8e3e;
+}
+
+.details-desc {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 12px 0;
+}
+
+/* Optimistic Cart Section */
+.optimistic-cart-section {
+  background-color: #f8f9fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-counter-display {
+  font-size: 15px;
+}
+
+.updating-tag {
+  color: #e37400;
+  font-weight: 500;
+}
+
+.alert-cart-error {
+  padding: 8px;
+  background-color: #fce8e6;
+  border-radius: 4px;
+}
+
+.cart-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-add-cart {
+  padding: 10px 20px;
+  background-color: #1e8e3e;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-add-cart:hover:not(:disabled) {
+  background-color: #187733;
+}
+
+.btn-add-cart:disabled {
+  background-color: #9aa0a6;
+  cursor: not-allowed;
+}
+
+.btn-remove-cart {
+  padding: 10px 16px;
+  background-color: #f1f3f4;
+  color: #d93025;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-remove-cart:hover:not(:disabled) {
+  background-color: #fce8e6;
+  border-color: #f5c2c7;
+}
+
+.btn-remove-cart:disabled {
+  color: #9aa0a6;
+  border-color: #e1e4e8;
+  background-color: #fafafa;
+  cursor: not-allowed;
+}
+
+.details-nav-row {
+  margin: 6px 0 10px;
+}
+
+.btn-scroll-link {
+  font-size: 13px;
+  color: #1a73e8;
+  font-weight: 500;
+  padding: 4px 0;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.btn-scroll-link:hover {
+  color: #1557b0;
+}
+
+.section-divider {
+  margin: 32px 0 24px;
+}
+
+/* Specifications Section (Ref as a Prop) */
+.product-specs-section {
+  padding: 20px;
+  background-color: #fafbfc;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  margin-top: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.specs-heading {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #202124;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table td {
+  padding: 10px 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #eaecef;
+}
+
+.specs-table tr:last-child td {
+  border-bottom: none;
+}
+
+.specs-label {
+  width: 35%;
+  font-weight: 500;
+  color: #5f6368;
+}
+
+.specs-value {
+  color: #202124;
 }
 
 /* States */
